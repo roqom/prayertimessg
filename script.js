@@ -29,7 +29,10 @@ function renderDates(data) {
   const hijriEl = document.getElementById('hijri-date');
   const gregorianEl = document.getElementById('gregorian-date');
   if (hijriEl) hijriEl.textContent = data.hijri_date;
-  if (gregorianEl) gregorianEl.textContent = data.friendly_date;
+  if (gregorianEl) {
+    const dayName = new Date().toLocaleDateString('en-SG', { weekday: 'short' });
+    gregorianEl.textContent = `${dayName}, ${data.friendly_date}`;
+  }
 }
 
 function renderPrayerTimes(data) {
