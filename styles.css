@@ -1,0 +1,664 @@
+/* Inter font faces */
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter-ExtraLight.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-black: #000000;
+  --color-grey: #747474;
+  --color-red: #f04642;
+  --color-bg: #f3f2f7;
+  --color-white: #ffffff;
+  --border-color: rgba(116, 116, 116, 0.2);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-black);
+  padding: 2rem 1rem 3rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.title {
+  margin: 0 0 0.5rem;
+  font-size: 1.85rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.title-link {
+  color: var(--color-black);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.title-link:hover {
+  opacity: 0.7;
+}
+
+.title-accent {
+  color: var(--color-red);
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--color-grey);
+  letter-spacing: 0.01em;
+}
+
+/* Main card */
+.main {
+  max-width: 28rem;
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--color-white);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  padding: 1.5rem 1.25rem 1.75rem;
+}
+
+.card-dates {
+  margin-bottom: 1.5rem;
+  text-align: right;
+}
+
+.date-line {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.date-line + .date-line {
+  margin-top: 0.05rem;
+  font-size: 0.95rem;
+  color: var(--color-grey);
+}
+
+/* Prayer list */
+.prayer-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.prayer-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.prayer-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.prayer-item:first-child {
+  padding-top: 0;
+}
+
+.prayer-time {
+  display: flex;
+  align-items: baseline;
+  min-width: 9rem;
+  justify-content: flex-start;
+}
+
+.prayer-time-value {
+  font-size: 2.25rem;
+  font-weight: 200;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  flex-shrink: 0;
+  margin-right: 0.05em;
+}
+
+.prayer-time-period {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--color-grey);
+  line-height: 1;
+  margin-left: auto;
+  text-align: right;
+  width: 2.5rem;
+  flex-shrink: 0;
+}
+
+.prayer-name {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--color-grey);
+  letter-spacing: 0.01em;
+}
+
+/* Attribution */
+.attribution {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  font-size: 0.7rem;
+  color: var(--color-grey);
+  text-align: center;
+  line-height: 1.4;
+}
+
+.attribution-link {
+  color: var(--color-black);
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.attribution-link:hover {
+  text-decoration: underline;
+}
+
+/* Server hint */
+.server-hint {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f5f5f5;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: var(--color-grey);
+  line-height: 1.6;
+}
+
+.server-hint code {
+  background: #e8e8e8;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* Content pages (About, etc.) */
+.content-page {
+  background: var(--color-white);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  padding: 2rem 1.5rem;
+  max-width: 100%;
+}
+
+.content-page-open {
+  max-width: 100%;
+  padding: 0;
+}
+
+.content-section {
+  margin-bottom: 2.5rem;
+}
+
+.content-section:last-child {
+  margin-bottom: 0;
+}
+
+.content-heading {
+  margin: 0 0 1.25rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-black);
+  letter-spacing: -0.02em;
+}
+
+.content-text {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-black);
+  line-height: 1.7;
+}
+
+.content-text:last-child {
+  margin-bottom: 0;
+}
+
+/* Philosophy section */
+.philosophy-item {
+  margin-bottom: 1.5rem;
+}
+
+.philosophy-item:last-of-type {
+  margin-bottom: 1rem;
+}
+
+.philosophy-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-black);
+}
+
+/* Features grid */
+.features-grid {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.feature-grid-item {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-black);
+  padding: 0;
+  line-height: 1.5;
+}
+
+/* Legacy features list (kept for backwards compatibility) */
+.features-list {
+  list-style: none;
+  margin: 1.25rem 0;
+  padding: 0;
+}
+
+.feature-item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: flex-start;
+}
+
+.feature-item:last-child {
+  margin-bottom: 0;
+}
+
+.feature-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.feature-content {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-black);
+}
+
+.feature-content strong {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+/* Contact section */
+.contact-section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.email-link {
+  color: var(--color-black);
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+}
+
+/* Footer navigation */
+.footer-nav {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+.nav-link {
+  color: #c0c0c0;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-black);
+}
+
+.nav-link.active {
+  color: var(--color-black);
+}
+
+.nav-separator {
+  color: #c0c0c0;
+  margin: 0 0.5rem;
+}
+
+/* Support section */
+.support-section {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.support-text {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-black);
+  line-height: 1.4;
+}
+
+.coffee-link {
+  color: var(--color-red);
+  text-decoration: underline;
+  font-weight: 400;
+  transition: opacity 0.2s ease;
+}
+
+.coffee-link:hover {
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 479px) {
+  body {
+    padding: 2rem 0.75rem 1rem;
+  }
+
+  .header {
+    margin-bottom: 1.25rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .subtitle {
+    font-size: 0.85rem;
+  }
+
+  .card {
+    padding: 1rem 0.875rem 1.125rem;
+    border-radius: 16px;
+  }
+
+  .card-dates {
+    margin-bottom: 1rem;
+  }
+
+  .date-line {
+    font-size: 0.95rem;
+  }
+
+  .date-line + .date-line {
+    font-size: 0.875rem;
+  }
+
+  .prayer-time {
+    min-width: 10rem;
+  }
+
+  .prayer-time {
+    min-width: 9.5rem;
+  }
+
+  .prayer-time-value {
+    font-size: 3.25rem;
+    margin-right: 0;
+  }
+
+  .prayer-time-period {
+    font-size: 1.2rem;
+    width: 2.2rem;
+  }
+
+  .prayer-name {
+    font-size: 0.875rem;
+  }
+
+  .prayer-item {
+    padding: 0.7rem 0;
+  }
+
+  .attribution {
+    font-size: 0.6rem;
+  }
+
+  .footer-nav {
+    margin-top: 1.5rem;
+    font-size: 0.75rem;
+    padding: 0 0.5rem;
+  }
+
+  .nav-separator {
+    margin: 0 0.35rem;
+  }
+
+  .support-section {
+    margin-top: 2rem;
+  }
+
+  .support-text {
+    font-size: 1.05rem;
+    padding: 0 0.5rem;
+  }
+
+  .content-page {
+    padding: 1.5rem 1rem;
+    border-radius: 16px;
+  }
+
+  .content-heading {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .content-text {
+    font-size: 0.95rem;
+  }
+
+  .philosophy-title {
+    font-size: 1rem;
+  }
+
+  .feature-icon {
+    font-size: 1.25rem;
+  }
+
+  .feature-content {
+    font-size: 0.95rem;
+  }
+
+  .features-grid {
+    gap: 0.6rem;
+  }
+
+  .feature-grid-item {
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .card {
+    padding: 1.75rem 1.5rem 2rem;
+  }
+
+  .prayer-time-value {
+    font-size: 2.1rem;
+  }
+
+  .content-page {
+    padding: 1.75rem 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 3rem 2rem 4rem;
+  }
+
+  .main {
+    max-width: 32rem;
+  }
+
+  .header {
+    margin-bottom: 3rem;
+  }
+
+  .title {
+    font-size: 2.25rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .card {
+    padding: 2rem;
+    border-radius: 24px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  .date-line {
+    font-size: 1.1rem;
+  }
+
+  .date-line + .date-line {
+    font-size: 1rem;
+  }
+
+  .prayer-item {
+    padding: 1.15rem 0;
+  }
+
+  .prayer-time-value {
+    font-size: 2.75rem;
+  }
+
+  .prayer-name {
+    font-size: 1rem;
+  }
+
+  .footer-nav {
+    margin-top: 2.5rem;
+    font-size: 0.9rem;
+  }
+
+  .support-section {
+    margin-top: 3rem;
+  }
+
+  .support-text {
+    font-size: 1.6rem;
+  }
+
+  .content-page {
+    padding: 2.5rem 2rem;
+    border-radius: 24px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  .content-heading {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .content-text {
+    font-size: 1.05rem;
+  }
+
+  .philosophy-title {
+    font-size: 1.15rem;
+  }
+
+  .feature-icon {
+    font-size: 1.75rem;
+  }
+
+  .feature-content {
+    font-size: 1.05rem;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 2rem;
+    margin-top: 2rem;
+  }
+
+  .feature-grid-item {
+    font-size: 1.05rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main {
+    max-width: 36rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .card {
+    padding: 2.5rem 3rem;
+  }
+
+  .prayer-time-value {
+    font-size: 3.25rem;
+  }
+
+  .content-page {
+    padding: 3rem 3.5rem;
+  }
+
+  .content-heading {
+    font-size: 2rem;
+  }
+
+  .content-text {
+    font-size: 1.1rem;
+  }
+
+  .philosophy-title {
+    font-size: 1.25rem;
+  }
+}
