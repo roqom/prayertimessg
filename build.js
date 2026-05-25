@@ -62,6 +62,12 @@ async function main() {
     `<meta name="description" content="${metaDesc}">`
   );
 
+  // Patch JSON-LD description
+  html = html.replace(
+    /("description":\s*")[^"]*(")/,
+    `$1${metaDesc}$2`
+  );
+
   // Patch Hijri date fallback
   html = html.replace(
     /(<p id="hijri-date" class="date-line">)[^<]*(<\/p>)/,
