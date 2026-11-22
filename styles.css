@@ -368,29 +368,24 @@ body {
   margin: 0 0.5rem;
 }
 
-/* Support section */
-.support-section {
-  margin-top: 2.5rem;
+.site-footer {
+  margin-top: 1.5rem;
   text-align: center;
+  color: var(--color-grey);
+  font-size: 0.8125rem;
+  line-height: 1.6;
 }
 
-.support-text {
-  margin: 0;
-  font-size: 1.5rem;
-  font-weight: 400;
+.site-footer p {
+  margin: 0.25rem 0;
+}
+
+.site-footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  vertical-align: middle;
   color: var(--color-black);
-  line-height: 1.4;
-}
-
-.coffee-link {
-  color: var(--color-red);
-  text-decoration: underline;
-  font-weight: 400;
-  transition: opacity 0.2s ease;
-}
-
-.coffee-link:hover {
-  opacity: 0.8;
 }
 
 /* Responsive */
@@ -467,15 +462,6 @@ body {
 
   .nav-separator {
     margin: 0 0.35rem;
-  }
-
-  .support-section {
-    margin-top: 2rem;
-  }
-
-  .support-text {
-    font-size: 1.05rem;
-    padding: 0 0.5rem;
   }
 
   .content-page {
@@ -581,14 +567,6 @@ body {
   .footer-nav {
     margin-top: 2.5rem;
     font-size: 0.9rem;
-  }
-
-  .support-section {
-    margin-top: 3rem;
-  }
-
-  .support-text {
-    font-size: 1.6rem;
   }
 
   .content-page {
