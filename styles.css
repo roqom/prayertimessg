@@ -464,6 +464,10 @@ body {
     margin: 0 0.35rem;
   }
 
+  .site-footer {
+    font-size: 0.75rem;
+  }
+
   .content-page {
     padding: 1.5rem 1rem;
     border-radius: 16px;
